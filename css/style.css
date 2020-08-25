@@ -272,9 +272,10 @@ audio {
 	margin-right: 20px;
 }
 @media screen and (max-width: 767px) {
-	/* body{
-		background-repeat: repeat-y;
-	} */
+	body{
+		background-size: contain;
+/* 		background-repeat: repeat-y; */
+	}
 	audio{
 		max-width: 135px;
 		max-height: 15px;
