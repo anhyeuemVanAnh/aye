@@ -1,13 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
-
 <html lang="vi">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>For my love  ❤️  𝓥𝓪𝓷 𝓐𝓷𝓱</title>
-  <meta name="description" content="a" />
-  <meta property="og:description" content="a" />
-  <meta property="og:image" content="a" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="http://bit.ly/orangepic">
   <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
   <script type="text/javascript" charset="utf-8">
     function hasClassName(inElement, inClassName)
@@ -30,7 +28,6 @@
             inElement.className = curClasses.replace(regExp, ' ');
         }
     }
-
     function toggleClassName(inElement, inClassName)
     {
         if (hasClassName(inElement, inClassName))
@@ -38,7 +35,6 @@
         else
             addClassName(inElement, inClassName);
     }
-
     function toggleShape()
     {
       var shape = document.getElementById('shape');
@@ -53,8 +49,7 @@
       } else {
         removeClassName(shape, 'ring');
         addClassName(shape, 'cube');
-      }
-      
+      }      
       var stage = document.getElementById('stage');
       if (hasClassName(shape, 'ring'))
         stage.style.webkitTransform = 'translateZ(-200px)';
@@ -104,15 +99,12 @@
 			toggleShape();
 		}
 	}
-  </script>
-  
-  <script type="text/javascript" src="https://redirect.nhq.vn/demo/js/snow.js"></script>
-  
+  </script> 
 </head>
 <body onload="timedCount()">
   <div class="panel">
     <div class="audio"><audio id="player" controls autoplay><source src=""></audio></div>
-    <div class="author"><button onclick="downloadLink()">My love ❤️</button></div>
+    <div class="author"><button id="button1" type="button">Hide box</button><button onclick="downloadLink()">My love ❤️</button></div>
 	<div class="clear"></div>
   </div>
   <div id="container">
@@ -134,23 +126,23 @@
     </div>
   </div>
   <script type="text/javascript">
-  
 	var audios = [
-		"https://www.mboxdrive.com/Talking-to-the-moon.mp3",
-    "https://www.mboxdrive.com/Iron-man.mp3",
-    "https://www.mboxdrive.com/Thay-toi-yeu-co-ay.mp3",
-    "https://www.mboxdrive.com/Anh-oi-o-lai.mp3",
-    "https://www.mboxdrive.com/Buon-khong-em.mp3",
-    "https://www.mboxdrive.com/Co-chang-trai-viet-len-cay.mp3",
-    "https://www.mboxdrive.com/Tim-em-trong-mo.mp3",
-    "https://www.mboxdrive.com/Van-su-tuy-duyen.mp3"
+    "https://www.mboxdrive.com/Nang-tho.mp3",
+		"https://www.mboxdrive.com/Let-me-down-slowly.mp3",
+    "https://www.mboxdrive.com/Love-story.mp3",
+    "https://www.mboxdrive.com/Ve-voi-anh-di.mp3",
+    "https://www.mboxdrive.com/Phut-ban-dau.mp3",
+    "https://www.mboxdrive.com/Pho-khong-em.mp3",
+    "https://www.mboxdrive.com/La-lung.mp3",
+    "https://www.mboxdrive.com/Chang-trai-mac-ao-xanh.mp3",
+    "https://www.mboxdrive.com/1-phut.mp3"
 	];
 
 	var music = document.getElementById("player");
 	var getSrc = document.getElementsByTagName("source");
 	
 	
-	getSrc[0].src = audios[Math.floor(Math.random() * 8)];
+	getSrc[0].src = audios[Math.floor(Math.random() * 9)];
 	music.load();
 	
 	var index = audios.indexOf(getSrc[0].src);
@@ -168,7 +160,9 @@
 	
 	var firstPreload = new Image();
 	firstPreload.src = "css/bg/1.jpg";
-	
   </script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="main.js"></script>
+<script type="text/javascript" src="https://redirect.nhq.vn/demo/js/snow.js"></script>
 </body>
 </html>
